@@ -1,0 +1,428 @@
+/*=========================
+    Base css
+===========================*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Roboto+Condensed:300,300i,400,400i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script:400,700');
+html,
+body {
+    height: 100%;
+    padding: 0px;
+}
+
+a:focus {
+    text-decoration: none;
+}
+
+a:focus,
+input:focus,
+button:focus,
+textarea:focus {
+    outline: 0 solid
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 15px;
+    font-weight: 700;
+    color: #333;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    font-size: 14px;
+    line-height: 1.7;
+    font-weight: normal;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+a,
+input,
+button,
+select,
+textarea {
+    font-family: 'Poppins', sans-serif;
+}
+
+a:hover {
+    text-decoration: none
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.fix {
+    overflow: hidden;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 5px 0;
+    padding: 0;
+}
+
+
+p {
+    padding: 0px;
+    margin: 0px;
+}
+
+.pos-rel {
+    position: relative;
+}
+
+.pos-abs {
+    position: absolute;
+}
+
+.section-padding {
+    padding: 100px 0;
+}
+
+.inline-Block {
+    display: inline-block;
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.display-table {
+    display: table;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.overlay {
+    position: relative;
+    z-index: 1;
+}
+
+.overlay:after {
+    position: absolute;
+    content: '';
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/*===============================================================================
+    Base css
+=================================================================================*/
+
+/*=========================
+    header Start
+===========================*/
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: .5s;
+}
+
+.logo {
+    height: 50px;
+    width: 200px;
+}
+
+.navbar-brand {
+    height: 40px;
+    width: 130px;
+    padding: 0;
+}
+
+.navbar-brand img {
+    height: 100%;
+    width: 100%;
+}
+
+.single_home_item {
+    height: 100vh;
+    width: 100%;
+}
+.homeslider,
+.homeslider div {
+    height: 100%;
+}
+
+.homeslider div.container div,
+.homeslider .container {
+    height: auto;
+}
+.hide_header {
+    transform: translateY(-200px);
+}
+
+
+
+
+
+.single_slide_item {
+    height: 100%;
+    width: 100vh;
+}
+
+.slider_text h1 {
+    color: #fff;
+}
+
+.slide_bg_1 {
+    background-image: url(../images/bg_1.jpg);
+}
+
+.slide_bg_2 {
+    background-image: url(../images/bg_2.jpg);
+}
+
+.slide_bg_3 {
+    background-image: url(../images/bg_3.jpg);
+}
+
+.cover_bg {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.homeslider .owl-nav div {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-size: 35px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin-top: -30px;
+    line-height: 40px;
+    color: #fff;
+    z-index: 1;
+}
+.homeslider .owl-nav div:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform: translateX(-30px);
+    transition: .5s;
+    background-color: #000;
+    opacity: 0;
+}
+.homeslider .owl-nav div.owl-next:after {
+    transform: translateX(30px);
+}
+.homeslider .owl-nav div.owl-next {
+    left: auto;
+    right: 0;
+}
+
+.homeslider .owl-nav div.owl-next:hover:after,
+.homeslider .owl-prev:hover:after {
+    transform: translateX(0px);
+    opacity: .8;
+}
+
+/*=========================
+    offcanvas manu Start
+===========================*/
+
+.offcanvas_shadow {
+    position: fixed;
+    z-index: 900;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.offcanvas_bar {
+    position: fixed;
+    top: 10px;
+    left: 249px;
+    z-index: 100;
+    text-align: center;
+    cursor: pointer;
+    cursor: pointer;
+}
+
+.offcanvas_bar i {
+    padding: 10px;
+    color: #D8D8D8;
+    font-size: 20px;
+    line-height: 17px;
+    border: 1px solid #ffffff3b;
+    transition: .5s;
+}
+
+.offcanvas_bar i:hover {
+    color: #fff;
+    background-color: #32476D;
+}
+
+.offcanvas_menu.show_offcanvas {
+    visibility: visible;
+    margin: 0;
+    opacity: 1;
+}
+
+.offcanvas_shadow.show_shadow {
+    visibility: visible;
+    opacity: .7;
+}
+
+
+
+.offcanvas_menu {
+    position: fixed;
+    z-index: 999;
+    visibility: hidden;
+    margin-left: -250px;
+    max-height: 100vh;
+    width: 300px;
+    height: 100%;
+    opacity: 0;
+    transition: .5s;
+    background: #000;
+}
+
+.fa-sign-in {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+    padding: 8px;
+    color: #fff;
+    font-size: 27px;
+    opacity: .5;
+    cursor: pointer;
+    transform: rotateY(180deg);
+    transition: all 0.5s ease-in-out;
+}
+
+.fa-sign-in:hover {
+    opacity: 1;
+}
+
+
+.offcanvas_logo {
+    padding: 10px;
+    width: 150px;
+    transition: .5s;
+}
+
+.offcanvas_logo:hover {
+    transform: scale(1.04);
+}
+
+.offcanvas_menu h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+}
+
+/*=========================
+    offcanvas_fev_icon start
+===========================*/
+
+.offcanvas_fev_icon {
+    position: absolute;
+    bottom: -200px;
+    margin: 0 auto;
+    width: 300px;
+    text-align: center;
+    transition: 1s;
+}
+
+.fa-facebook {
+    background-color: #3B5998;
+}
+
+.fa-twitter {
+    background-color: #28AAE1;
+}
+
+.fa-google-plus {
+    background-color: #C40807;
+}
+
+.fa-linkedin {
+    background-color: #0077B5;
+}
+
+.offcanvas_fev_icon ul li {
+    display: inline-block;
+}
+
+.offcanvas_fev_icon ul li a {
+    display: block;
+    margin: 5px;
+}
+
+.offcanvas_fev_icon ul li i {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    line-height: 35px;
+    transition: .5s;
+}
+
+.offcanvas_fev_icon ul li i:hover {
+    transform: scale(1.3) rotate(360deg);
+    border-radius: 50%;
+    border-color: #fff;
+    background-color: #fff;
+    color: #333
+}
+
+.show_icon {
+    bottom: 0;
+}
+
+/*=========================
+    offcanvas_fev_icon end
+===========================*/
+
+/*=========================
+    offcanvas manu end
+===========================*/
